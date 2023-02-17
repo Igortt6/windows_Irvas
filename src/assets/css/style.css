@@ -18,6 +18,21 @@ body {
   color: red;
 }
 
+.faded {
+  animation: faded 1.5s;
+}
+
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 a:hover {
   text-decoration: none;
 }
