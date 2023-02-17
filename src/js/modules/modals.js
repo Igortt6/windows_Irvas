@@ -43,7 +43,6 @@ const modals = () => {
             allPopup();
             closePopup();
         });
-
         modal.addEventListener('click', (e) => {
             if (e.target === modal && closeByOverlayOrEsc) {
 
@@ -79,6 +78,5 @@ const modals = () => {
     // showModalByTime('.popup', 60000);
 
 };
-
 
 export default modals;

@@ -1,5 +1,5 @@
 import checkNumInputs from "./checkNumInputs";
-
+// Передаємо в стейт пустий обєкт modalState з main.Js. Вибираємо по селекторах, звікти ми будемо брати данні на сторінці. Валідуємо їх, окремою функцією checkNumInputs. За допомогою глобальної функції bindActionToElem: на певний нлнмент, навішує певний обробник, та записуе результат в стейт. Результат передається в main.js
 
 const changeModalState = (state) => {
     const windowForm = document.querySelectorAll('.balcon_icons_img'),
@@ -39,6 +39,9 @@ const changeModalState = (state) => {
             });
         });
     }
+    function clearState(state) {
+        state = '';
+    };
 
     bindActionToElem('click', windowForm, 'form');
     bindActionToElem('input', windowWidth, 'width');

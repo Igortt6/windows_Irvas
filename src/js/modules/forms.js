@@ -1,4 +1,7 @@
 import checkNumInputs from "./checkNumInputs";
+import modals from "./modals";
+
+// Передаємо вже заповнений обʼєкт modalState в стейт. (лише для форми - калькулятора). 
 
 const forms = (state) => {
     const form = document.querySelectorAll('form'),
@@ -22,17 +25,17 @@ const forms = (state) => {
 
         return await res.text();
     }
-
     const clearInputs = () => {
         inputs.forEach(item => {
             item.value = "";
         });
     };
 
+
+    // блок для обробки натискання на кнопку ВІДПРАВИТИ 
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
-
 
             // Створюемо, і розміщяемо блок зі статусом помилки
             let statusMessage = document.createElement('div');
@@ -47,7 +50,6 @@ const forms = (state) => {
                     formData.append(key, state[key]);
                 }
             }
-
 
             postData('assets/server.php', formData)
                 .then(res => {
