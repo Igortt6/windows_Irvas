@@ -14,3 +14,4 @@ https://www.udemy.com/course/javascript_practice/learn/lecture/17735364#question
 5. Таймер
 6. Збільшення зображення 
 
+
